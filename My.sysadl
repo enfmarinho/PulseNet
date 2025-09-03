@@ -5,4 +5,12 @@ package SysADL.types {
 	value type String { } 
 	value type Void { } 
 	value type Real { }
-}
+} 
+Requirement RF1 ( 1 ) { 
+	text = "O sistema deve coletar dados de sensores de frequência cardíaca, frequência respiratória, pressão arterial e eletrocardiograma." 
+	Requirement newElement ( 2 ) { 
+		derive asdf ; 
+		
+	}
+} 
+Requirement asdf ( 3 ) { }
