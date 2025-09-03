@@ -8,9 +8,7 @@ package SysADL.types {
 } 
 Requirement RF1 ( 1 ) { 
 	text = "O sistema deve coletar dados de sensores de frequência cardíaca, frequência respiratória, pressão arterial e eletrocardiograma." 
-	Requirement newElement ( 2 ) { 
-		derive asdf ; 
-		
-	}
+	
 } 
-Requirement asdf ( 3 ) { }
+ 
+Requirement RF2 ( 2 ) { text = "Cada sensor deve enviar suas leituras para o coletor com uma periodicidade de no mínimo uma vez por segundo." } Requirement MonitorPatientCardiacDataFR ( 4 ) { Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" } }

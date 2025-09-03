@@ -24,7 +24,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_9mTbwINREfClopnZVRc_hQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_QDzm8INUEfCouKimTfZ8ww" name="Requirements Diagram" repPath="#_QDXiEINUEfCouKimTfZ8ww" changeId="1756305839414">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_QDzm8INUEfCouKimTfZ8ww" name="Requirements Diagram" repPath="#_QDXiEINUEfCouKimTfZ8ww" changeId="1756911633046">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']"/>
         <target xmi:type="sysadl:Model" href="My.sysadl#/"/>
       </ownedRepresentationDescriptors>
@@ -96,13 +96,97 @@
         <children xmi:type="notation:Node" xmi:id="_Qa54UINUEfCouKimTfZ8ww" type="2002" element="_QEx3UINUEfCouKimTfZ8ww">
           <children xmi:type="notation:Node" xmi:id="_QbB0IINUEfCouKimTfZ8ww" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_QbCbMINUEfCouKimTfZ8ww" type="7001">
+            <children xmi:type="notation:Node" xmi:id="__A9wwIjUEfCS6fE0Rkk7VQ" type="3009" element="_jnAn8IjSEfCS6fE0Rkk7VQ">
+              <children xmi:type="notation:Node" xmi:id="__A9ww4jUEfCS6fE0Rkk7VQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="__A9wxIjUEfCS6fE0Rkk7VQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="__A9w1YjUEfCS6fE0Rkk7VQ" type="3010" element="_jnHVoIjSEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="__A9w1ojUEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="__A9w14jUEfCS6fE0Rkk7VQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="__A9w2IjUEfCS6fE0Rkk7VQ" type="3010" element="_jnUJ8IjSEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="__A9w2YjUEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="__A9w2ojUEfCS6fE0Rkk7VQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="__A9wxYjUEfCS6fE0Rkk7VQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="__A9wxojUEfCS6fE0Rkk7VQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__A9wwYjUEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__A9wwojUEfCS6fE0Rkk7VQ" x="459" y="432" width="339"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_EFCHkIjVEfCS6fE0Rkk7VQ" type="3009" element="_EE92IojVEfCS6fE0Rkk7VQ">
+              <children xmi:type="notation:Node" xmi:id="_EFCHk4jVEfCS6fE0Rkk7VQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_EFCHlIjVEfCS6fE0Rkk7VQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_EFCHl4jVEfCS6fE0Rkk7VQ" type="3010" element="_EE-dMYjVEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_EFCHmIjVEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EFCHmYjVEfCS6fE0Rkk7VQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_EFCuoIjVEfCS6fE0Rkk7VQ" type="3010" element="_EE_EQIjVEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_EFCuoYjVEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EFCuoojVEfCS6fE0Rkk7VQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_EFCHlYjVEfCS6fE0Rkk7VQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_EFCHlojVEfCS6fE0Rkk7VQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_EFCHkYjVEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFCHkojVEfCS6fE0Rkk7VQ" x="-9" y="370" width="335"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_UEKBQIjWEfCS6fE0Rkk7VQ" type="3009" element="_UEBeYojWEfCS6fE0Rkk7VQ">
+              <children xmi:type="notation:Node" xmi:id="_UELPYIjWEfCS6fE0Rkk7VQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_UELPYYjWEfCS6fE0Rkk7VQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_UELPZIjWEfCS6fE0Rkk7VQ" type="3010" element="_UEDTkIjWEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_UELPZYjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_UELPZojWEfCS6fE0Rkk7VQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_UEL2cIjWEfCS6fE0Rkk7VQ" type="3010" element="_UEEhsIjWEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_UEL2cYjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_UEL2cojWEfCS6fE0Rkk7VQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_UELPYojWEfCS6fE0Rkk7VQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_UELPY4jWEfCS6fE0Rkk7VQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEKBQYjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEKBQojWEfCS6fE0Rkk7VQ" x="203" y="38" width="247" height="139"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qB6SAIjWEfCS6fE0Rkk7VQ" type="3009" element="_qB2AlojWEfCS6fE0Rkk7VQ">
+              <children xmi:type="notation:Node" xmi:id="_qB6SA4jWEfCS6fE0Rkk7VQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_qB6SBIjWEfCS6fE0Rkk7VQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_qB65EIjWEfCS6fE0Rkk7VQ" type="3010" element="_qB2noojWEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_qB65EYjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_qB65EojWEfCS6fE0Rkk7VQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_qB65E4jWEfCS6fE0Rkk7VQ" type="3010" element="_qB3OsYjWEfCS6fE0Rkk7VQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_qB65FIjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_qB65FYjWEfCS6fE0Rkk7VQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_qB6SBYjWEfCS6fE0Rkk7VQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_qB6SBojWEfCS6fE0Rkk7VQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qB6SAYjWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qB6SAojWEfCS6fE0Rkk7VQ" x="287" y="258"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_QbCbMYNUEfCouKimTfZ8ww"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_QbCbMoNUEfCouKimTfZ8ww"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa54UYNUEfCouKimTfZ8ww" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa54UoNUEfCouKimTfZ8ww" width="403" height="248"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa54UoNUEfCouKimTfZ8ww" x="88" y="36" width="891" height="671"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_QEI-IoNUEfCouKimTfZ8ww"/>
+        <edges xmi:type="notation:Edge" xmi:id="_vJczkIjWEfCS6fE0Rkk7VQ" type="4001" element="_vJX7EIjWEfCS6fE0Rkk7VQ" source="_qB6SAIjWEfCS6fE0Rkk7VQ" target="_UEKBQIjWEfCS6fE0Rkk7VQ">
+          <children xmi:type="notation:Node" xmi:id="_vJdaoIjWEfCS6fE0Rkk7VQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vJdaoYjWEfCS6fE0Rkk7VQ" x="-3" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vJdaoojWEfCS6fE0Rkk7VQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vJdao4jWEfCS6fE0Rkk7VQ" x="4" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vJdapIjWEfCS6fE0Rkk7VQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vJdapYjWEfCS6fE0Rkk7VQ" x="5" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_vJczkYjWEfCS6fE0Rkk7VQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_vJczkojWEfCS6fE0Rkk7VQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vJczk4jWEfCS6fE0Rkk7VQ" points="[0, 0, 28, 83]$[-28, -83, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vJdapojWEfCS6fE0Rkk7VQ" id="(0.6333333333333333,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vJdap4jWEfCS6fE0Rkk7VQ" id="(0.5387755102040817,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_QalvQINUEfCouKimTfZ8ww" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -115,7 +199,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_jnAn8IjSEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;RF1" outgoingEdges="_OxD3UIjTEfCS6fE0Rkk7VQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_jnAn8IjSEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;RF1">
         <target xmi:type="sysadl:Requirement" href="My.sysadl#1"/>
         <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#1"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_jnFgcIjSEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
@@ -139,70 +223,86 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_No5VYojTEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;newElement" outgoingEdges="_XOLNkIjTEfCS6fE0Rkk7VQ" incomingEdges="_OxD3UIjTEfCS6fE0Rkk7VQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_EE92IojVEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;RF2">
         <target xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
         <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_No58cIjTEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_EE92I4jVEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_No58cojTEfCS6fE0Rkk7VQ" name="id=2">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_EE-dMYjVEfCS6fE0Rkk7VQ" name="id=2">
           <target xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
           <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_No6jgIjTEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+          <ownedStyle xmi:type="diagram:Dot" uid="_EE-dMojVEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_No7KkIjTEfCS6fE0Rkk7VQ" name="text=">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_EE_EQIjVEfCS6fE0Rkk7VQ" name="text=Cada sensor deve enviar suas leituras para o coletor com uma periodicidade de no mínimo uma vez por segundo.">
           <target xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
           <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_No7KkYjTEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+          <ownedStyle xmi:type="diagram:Dot" uid="_EE_EQYjVEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_VbwNsYjTEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;asdf" incomingEdges="_XOLNkIjTEfCS6fE0Rkk7VQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_UEBeYojWEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;MonitorPatientDataFR" incomingEdges="_vJX7EIjWEfCS6fE0Rkk7VQ">
         <target xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
         <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_VbwNsojTEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_UECFcIjWEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_VbwNtIjTEfCS6fE0Rkk7VQ" name="id=3">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_UEDTkIjWEfCS6fE0Rkk7VQ" name="id=3">
           <target xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
           <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_VbwNtYjTEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+          <ownedStyle xmi:type="diagram:Dot" uid="_UED6oIjWEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_Vbw0wIjTEfCS6fE0Rkk7VQ" name="text=">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_UEEhsIjWEfCS6fE0Rkk7VQ" name="text=Monitores the patient health data">
           <target xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
           <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#3"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_Vbw0wYjTEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+          <ownedStyle xmi:type="diagram:Dot" uid="_UEFIwIjWEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qB2AlojWEfCS6fE0Rkk7VQ" name="&lt;&lt;requirement>>&#xA;MonitorPatientCardiacDataFR" outgoingEdges="_vJX7EIjWEfCS6fE0Rkk7VQ">
+        <target xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+        <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qB2noIjWEfCS6fE0Rkk7VQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qB2noojWEfCS6fE0Rkk7VQ" name="id=4">
+          <target xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+          <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_qB3OsIjWEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qB3OsYjWEfCS6fE0Rkk7VQ" name="text=">
+          <target xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+          <semanticElements xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_qB3OsojWEfCS6fE0Rkk7VQ" showIcon="false" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_OxD3UIjTEfCS6fE0Rkk7VQ" sourceNode="_jnAn8IjSEfCS6fE0Rkk7VQ" targetNode="_No5VYojTEfCS6fE0Rkk7VQ">
-      <target xmi:type="sysadl:Requirement" href="My.sysadl#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OxJ98IjTEfCS6fE0Rkk7VQ" lineStyle="dash" sourceArrow="FillDiamond" targetArrow="InputFillClosedArrow" size="2" strokeColor="0,0,0">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vJX7EIjWEfCS6fE0Rkk7VQ" sourceNode="_qB2AlojWEfCS6fE0Rkk7VQ" targetNode="_UEBeYojWEfCS6fE0Rkk7VQ">
+      <target xmi:type="sysadl:Requirement" href="My.sysadl#4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vJX7EYjWEfCS6fE0Rkk7VQ" lineStyle="dash" sourceArrow="FillDiamond" targetArrow="InputFillClosedArrow" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@edgeMappings[name='SysADL.Req.Composition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_OxJ98YjTEfCS6fE0Rkk7VQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vJX7EojWEfCS6fE0Rkk7VQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@edgeMappings[name='SysADL.Req.Composition']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XOLNkIjTEfCS6fE0Rkk7VQ" name="&lt;&lt;derive>>" sourceNode="_No5VYojTEfCS6fE0Rkk7VQ" targetNode="_VbwNsYjTEfCS6fE0Rkk7VQ">
-      <target xmi:type="sysadl:Requirement" href="My.sysadl#2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XOLNkYjTEfCS6fE0Rkk7VQ" lineStyle="dash" size="2" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@edgeMappings[name='SysADL.Req.Derive']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_XOLNkojTEfCS6fE0Rkk7VQ" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@edgeMappings[name='SysADL.Req.Derive']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_QDkWYINUEfCouKimTfZ8ww"/>
