@@ -6,9 +6,10 @@ package SysADL.types {
 	value type Void { } 
 	value type Real { }
 } 
-Requirement RF1 ( 1 ) { 
-	text = "O sistema deve coletar dados de sensores de frequência cardíaca, frequência respiratória, pressão arterial e eletrocardiograma." 
-	
-} 
+
  
-Requirement RF2 ( 2 ) { text = "Cada sensor deve enviar suas leituras para o coletor com uma periodicidade de no mínimo uma vez por segundo." } Requirement MonitorPatientCardiacDataFR ( 4 ) { Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" } }
+Requirement MonitorElectrocardiogramFR ( 4 ) {   derive MonitorPatientDataFR ; } 
+Requirement MonitorBloodPressureFR ( 5 ) { derive MonitorPatientDataFR ; } 
+Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" } 
+Requirement MonitorHeartRateFR ( 7 ) { derive MonitorPatientDataFR ; } 
+Requirement MonitorRespiratoryRateFR ( 6 ) { derive MonitorPatientDataFR ; }
