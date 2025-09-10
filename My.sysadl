@@ -10,6 +10,8 @@ package SysADL.types {
  
 Requirement MonitorElectrocardiogramFR ( 4 ) {   derive MonitorPatientDataFR ; } 
 Requirement MonitorBloodPressureFR ( 5 ) { derive MonitorPatientDataFR ; } 
-Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" } 
+Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" derive MessagingClustersNFR ; } 
 Requirement MonitorHeartRateFR ( 7 ) { derive MonitorPatientDataFR ; } 
 Requirement MonitorRespiratoryRateFR ( 6 ) { derive MonitorPatientDataFR ; }
+Requirement MessagingClustersNFR ( 9 ) { derive GatewayNFR.GatewayPoolNFR ; }
+Requirement GatewayNFR ( 9 ) { Requirement GatewayPoolNFR ( 8 ) { derive GatewayRegisterNFR ; } } Requirement GatewayRegisterNFR ( 10 ) { derive GatewayLoadBalancerNFR ; } Requirement GatewayLoadBalancerNFR ( 11 ) { derive MedicalDashboardFR , MedicalAlertServiceFR ; } Requirement MedicalDashboardFR ( 12 ) { } Requirement MedicalAlertServiceFR ( 13 ) { } Requirement MedicalAnalysisAlgorithmFR ( 14 ) { derive MedicalAlertServiceFR ; }
