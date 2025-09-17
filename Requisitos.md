@@ -55,3 +55,35 @@
 - Usabilidade: A interface do dashboard deve ser intuitiva para profissionais de saúde, com treinamento mínimo.
 - Conformidade: O sistema deve estar em conformidade com as regulamentações de privacidade de dados de saúde (por exemplo, LGPD).
 - Auditoria: O sistema deve registrar todos os eventos de alerta e as ações tomadas (por exemplo, alarmes silenciados) para fins de auditoria.
+
+## 7. Value Types
+- Sensores:
+  - FrequênciaCardíaca:
+    - Dimension: Frequencia
+    - Unit: BPM
+  - FrequênciaRespiratória:
+    - Dimension: Frequencia
+    - Unit: RPM
+## 8. Data Types
+  - PressãoArterial:
+    - pressaoSistolica: Integer
+    - pressaoDiastolica: Integer
+  - SinalEletrocardiograma:
+    - amostras: Real[]
+    - timestamp: DateTime
+  - ColetorDadosPacientes:
+    - idPaciente: String
+    - timestamp: DateTime
+    - dadosFrequenciaCardiaca: FrequenciaCardiaca
+    - dadosFrequenciaRespiratoria: FrequenciaRespiratoria
+    - dadosPressaoArterial: MedicaoPressaoArterial
+    - dadosECG: SinalEletrocardiograma
+## 9. Enumerations
+  - NívelAlerta:
+    - CRITICO
+    - ATENCAO
+    - ESTAVEL
+
+
+
+
