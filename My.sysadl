@@ -8,10 +8,23 @@ package SysADL.types {
 } 
 
  
-Requirement MonitorElectrocardiogramFR ( 4 ) {   derive MonitorPatientDataFR ; } 
-Requirement MonitorBloodPressureFR ( 5 ) { derive MonitorPatientDataFR ; } 
-Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" derive MessagingClustersNFR ; } 
-Requirement MonitorHeartRateFR ( 7 ) { derive MonitorPatientDataFR ; } 
-Requirement MonitorRespiratoryRateFR ( 6 ) { derive MonitorPatientDataFR ; }
-Requirement MessagingClustersNFR ( 9 ) { derive GatewayNFR.GatewayPoolNFR ; }
-Requirement GatewayNFR ( 9 ) { Requirement GatewayPoolNFR ( 8 ) { derive GatewayRegisterNFR ; } } Requirement GatewayRegisterNFR ( 10 ) { derive GatewayLoadBalancerNFR ; } Requirement GatewayLoadBalancerNFR ( 11 ) { derive MedicalDashboardFR , MedicalAlertServiceFR ; } Requirement MedicalDashboardFR ( 12 ) { } Requirement MedicalAlertServiceFR ( 13 ) { } Requirement MedicalAnalysisAlgorithmFR ( 14 ) { derive MedicalAlertServiceFR ; }
+Requirement MonitorElectrocardiogramCP ( 4 ) { derive MonitorPatientDataFR ; } 
+Requirement MonitoBloodPresureCP ( 5 ) { derive MonitorPatientDataFR ; } 
+Requirement MonitorPatientDataFR ( 3 ) { text = "Monitores the patient health data" } 
+Requirement MonitorHeardRateCP ( 7 ) { derive MonitorPatientDataFR ; } 
+Requirement MonitorRespiratoryRateCP ( 6 ) { derive MonitorPatientDataFR ; }
+
+
+ 
+ 
+ 
+
+Requirement QualityNFR ( 91 ) { } 
+Requirement ModifiabilityNFR ( 92 ) { text = "The system must be easy and cheap to improve and modify" derive QualityNFR ; } 
+Requirement ScalabilityNFR ( 94 ) { text = " The System must be scalable to be able to process bigger data volumes and deal with more patients and sensors " derive QualityNFR ; } 
+Requirement AvailabiltyNFR ( 93 ) { text = "The system can not break down, it must be always working" derive QualityNFR ; } 
+Requirement FallbackNFR ( 95 ) { text = "The system must have a fallback device in case it fails, so even with down times the essential functionalities still work" derive AvailabiltyNFR ; } 
+Requirement SecurityNFR ( 96 ) { text = "The system must be safe" derive QualityNFR ; } 
+Requirement CriptografyNFR ( 97 ) { text = "All the patient data must be encrypted to assure safety and privacy" derive SecurityNFR ; } 
+Requirement AuthenticationNFR ( 98 ) { text = "All users must be authenticated before accessing data or receive alert notifications to avoid non allowed users to receive private patient data" derive SecurityNFR ; } 
+Requirement ConfiabilityNFFR ( 99 ) { text = "The essential system features must work even with system failure " derive QualityNFR ; }Requirement MedicalDashboardCP ( 100 ) { derive ReadPatientData ; } Requirement SavePatientData ( 101 ) { text = "Save patient data " derive MonitorPatientDataFR ; } Requirement ReadPatientData ( 102 ) { derive SavePatientData ; } Requirement MedicalAlertServiceFR ( 103 ) { derive ReadPatientData ; }
