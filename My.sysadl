@@ -198,6 +198,7 @@ Requirement Requisitos ( 8 ) {
 package SysADL.Components { 
 	import SysADL.Ports;
 	import SysADL.types;
+	import SysADL.Connectors;
 	
 	boundary
 	
@@ -252,7 +253,7 @@ package SysADL.Components {
 	
 	component def MonitoringDashboardCP { 
 		ports :
-			assinaturaAlerta : AlertaIPT ;
+			assinaturaAlerta : TopicoAlertaIPT ;
 			consultaDB : QueryOPT ;
 			solicitaAuth : AuthOPT ;
 			saidaHIS : IntegracaoOPT ;
@@ -267,15 +268,15 @@ package SysADL.Components {
     component def ColetorCP { 
     	ports :
     		entradaRede : MensagemRedeIPT ;
-    		saidaBroker : MensagemRedeOPT ;
+    		publicacao : TopicoVitalOPT ;
     		saidaMetrica : MetricaOPT ;
     	configuration { }
     }
     
     component def AlertProcessorCP { 
     	ports :
-    		entradaFila : MensagemRedeIPT ;
-    		publicaAlerta : AlertaOPT ;
+    		entradaFila :TopicoVitalIPT ;
+    		publicaAlerta : TopicoAlertaOPT ;
     		persistencia : PersistenciaOPT ;
     		saidaMetrica : MetricaOPT ;
     	configuration {
@@ -305,12 +306,12 @@ package SysADL.Components {
     component def MessageBrokerCP { 
     	ports :
     		
-    		entradaDados : MensagemRedeIPT ;
-    		saidaDados : MensagemRedeOPT ;
+    		entradaDados : TopicoVitalIPT ;
+    		saidaDados : TopicoVitalOPT ;
     		
     		
-    		entradaAlerta : AlertaIPT ;
-    		saidaAlerta : AlertaOPT ;
+    		entradaAlerta : TopicoAlertaIPT ;
+    		saidaAlerta : TopicoAlertaOPT ;
     	configuration { }
     }
     
@@ -325,16 +326,67 @@ package SysADL.Components {
     component def SysADLPulseNet {
     	configuration {
     		components :
-    			Coletor : ColetorCP {}
-    			MessageBroker : MessageBrokerCP {}
-    			AlertProcessor : AlertProcessorCP {}
+    			Coletor : ColetorCP {
+    				using ports :
+    					entradaRede : MensagemRedeIPT ;
+    					publicacao : TopicoVitalOPT ;
+    			}
+    			MessageBroker : MessageBrokerCP {
+    				using ports :
+    					entradaDados : TopicoVitalIPT ;
+    					saidaDados : TopicoVitalOPT ;
+    					entradaAlerta : TopicoAlertaIPT ;
+    					saidaAlerta : TopicoAlertaOPT ;
+    			}
+    			AlertProcessor : AlertProcessorCP {
+    				using ports :
+    					entradaFila : TopicoVitalIPT ;
+    					publicaAlerta : TopicoAlertaOPT ;
+    					persistencia : PersistenciaOPT ;
+    			}
     			LogicaMedica : LogicaMedicaCP {}
-    			Database : DatabaseCP {}
+    			Database : DatabaseCP {
+    				using ports :
+    					entradaGravacao : PersistenciaIPT ;
+    			}
     			AuthService : AuthServiceCP {}
-    			MonitoringDashboard : MonitoringDashboardCP {}
-    			DispositivoAlerta : DispositivoAlertaCP {}
-    			MonitorLeito : MonitorLeitoCP {}
-    			Sensor : SensorCP {}
+    			MonitoringDashboard : MonitoringDashboardCP {
+    				using ports :
+    					assinaturaAlerta : TopicoAlertaIPT ;
+    			}
+    			DispositivoAlerta : DispositivoAlertaCP {
+    				using ports :
+    					entradaComando : ComandoAlertaIPT ;
+    			}
+    			MonitorLeito : MonitorLeitoCP {
+    				using ports : 
+    					entradaSinal : SinalVitalIPT ;
+    					saidaRede : MensagemRedeOPT ;
+    					comandoAlarme : ComandoAlertaOPT ;
+    			}
+    			Sensor : SensorCP {
+    				using ports : 
+    					saidaSinal : SinalVitalOPT ;
+    			}
+    		
+    		connectors :
+				
+				c1 : FioFisicoCN bindings saidaSinal = entradaSinal ;
+			
+				c2 : AtuacaoCN bindings comandoAlarme = entradaComando ;
+					
+				c3 : RedeHospitalarCN bindings saidaRede = entradaRede ;
+					
+				c4 : StreamingVitalCN bindings publicacao = entradaDados ;
+					
+				c5 : StreamingVitalCN bindings saidaDados = entradaFila ;
+					
+				c6 : StreamingAlertaCN bindings publicaAlerta = entradaAlerta ;
+					
+				c7 : PersistenciaCN bindings persistencia = entradaGravacao ;
+				
+				c8 : StreamingAlertaCN bindings saidaAlerta = assinaturaAlerta ;
+    	
     	}
 
      	
@@ -431,7 +483,20 @@ package SysADL.Ports {
 	port def MensagemRedeIPT {
 		flow in mensagemColetor
 	}
-
+	
+	port def TopicoVitalOPT { 
+		flow out mensagemColetor
+	}
+	port def TopicoVitalIPT { 
+		flow in mensagemColetor
+	}
+	
+	port def TopicoAlertaOPT { 
+		flow out alertaDeRisco
+	}
+	port def TopicoAlertaIPT { 
+		flow in alertaDeRisco
+	}
 
 	port def IntegracaoOPT {
 		flow out paciente
@@ -492,5 +557,42 @@ package SysADL.Ports {
     port def MetricaOPT {
         flow out metricaInfra
     }
+}
+
+package SysADL.Connectors {
+	import SysADL.Ports;
+	import SysADL.types;
+
+
+	connector def FioFisicoCN {
+		participants : ~src : SinalVitalOPT; ~dst : SinalVitalIPT;
+		flows : mensagemSensor from src to dst
+	}
+	connector def AtuacaoCN {
+		participants : ~src : ComandoAlertaOPT; ~dst : ComandoAlertaIPT;
+		flows : Boolean from src to dst
+	}
+
+
+	connector def RedeHospitalarCN {
+		participants : ~src : MensagemRedeOPT; ~dst : MensagemRedeIPT;
+		flows : mensagemColetor from src to dst
+	}
+
+	connector def StreamingVitalCN {
+		participants : ~src : TopicoVitalOPT; ~dst : TopicoVitalIPT;
+		flows : mensagemColetor from src to dst
+	}
+
+
+	connector def StreamingAlertaCN {
+		participants : ~src : TopicoAlertaOPT; ~dst : TopicoAlertaIPT;
+		flows : alertaDeRisco from src to dst
+	}
+
+	connector def PersistenciaCN {
+		participants : ~src : PersistenciaOPT; ~dst : PersistenciaIPT;
+		flows : mensagemColetor from src to dst
+	}
 }
  
