@@ -6,7 +6,7 @@ Requirement Requisitos ( 8 ) {
 	
 	Requirement RequisitosNaoFuncionais ( 10 ) {
 		
-		Requirement SegurancaNFR ( 46 ) {
+		Requirement SegurancaNFR ( 46 ) { text = "Garante que o sistema é seguro "
 			Requirement AuditoriaNFR ( 49 ) {
 				text = "Todas as acoes de usuarios e alertas devem ser registradas com timestamp, ID do usuario e origem."
 			}
@@ -21,7 +21,7 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement ConfiabilidadeNFR ( 50 ) {
+		Requirement ConfiabilidadeNFR ( 50 ) { text = "Garante que o sistema é confiavel"
 			Requirement TaxaMaximaDeFalhasNFR ( 51 ) {
 				text = "O sistema deve operar com taxa de falhas recuperaveis inferior a 0,1%\ndas mensagens."
 			}
@@ -33,7 +33,7 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement DisponibilidadeNFR ( 34 ) {
+		Requirement DisponibilidadeNFR ( 34 ) { text = "Garante que o sistema está sempre funcionado e disponível"
 			Requirement RetentativaDeEnvioNFR ( 37 ) {
 				text = "Se a mensagem do sensor nao for entregue, o sistema deve reenviar a leitura ate um limite configurado."
 			}
@@ -51,7 +51,7 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement EscalabilidadeDesempenhoNFR ( 40 ) {
+		Requirement EscalabilidadeDesempenhoNFR ( 40 ) { text = "Garante que o sistema é escalável e eficiente"
 			Requirement EscalabilidadeHorizontalNFR ( 41 ) {
 				text = "Os servicos de mensageria, alerta e dashboard devem suportar instancias multiplas em balanceamento de carga."
 			}
@@ -66,13 +66,13 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement ModificabilidadeManutenibilidadeNFR ( 32 ) {
+		Requirement ModificabilidadeManutenibilidadeNFR ( 32 ) { text = "Garante que o sistema é de fácil manutencão e fácil de modificar e atualizar"
 			Requirement ModularidadeNFR ( 33 ) {
 				text = "Sensores, coletores, servicos e dashboards devem ser substituıveis sem impacto nas demais camadas. A logica medica deve ser isolada em um componente especıfico, permitindo alteracao sem modificar a infraestrutura."
 			}
 		}
 		
-		Requirement UsabilidadeNFR ( 56 ) {
+		Requirement UsabilidadeNFR ( 56 ) { text = "Garante que o sistema é de fácil uso"
 			Requirement AcessibilidadeNFR ( 55 ) {
 				text = "Dashboard com contraste alto, teclas de atalho e sem dependencia exclu-\nsiva de cores."
 			}
@@ -86,7 +86,7 @@ Requirement Requisitos ( 8 ) {
 	Requirement RequisitosFuncionais ( 9 ) {
 		
 		Requirement ColetaSinaisVitaisFR ( 7 ) {
-			text = "Agrupador de coleta" 
+			text = "Ler e agrupa os sinais vitais do paciente" 
 			
 			Requirement ColetarEletrocardiogramaFR ( 4 ) {
 				text = "O sistema deve coletar dados de sensores de eletrocardiograma com periodicidade mınima de uma vez por segundo. "
@@ -123,7 +123,7 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement ProcessamentoDeDadosFR ( 16 ) {
+		Requirement ProcessamentoDeDadosFR ( 16 ) { text = "Processsa, salva e lê os sinais vitais dos pacientes"
 			Requirement NormalizarDadosDeSinaisVitaisFR ( 17 ) {
 				text = "O coletor deve normalizar os dados de sinais vitais recebidos dos sensores, padronizando formatos e unidades de medida para processamento uniforme"
 			}
@@ -141,7 +141,7 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement AvaliacaoClinicaFR ( 22 ) {
+		Requirement AvaliacaoClinicaFR ( 22 ) { text = "O sistema deve ser capaz de avaliar o paciente automaticamente"
 			Requirement DetectarLimiarDeRiscoFR ( 23 ) {
 				text = "A Logica Medica deve avaliar os criterios de medicao e detectar condicoes crıticas baseadas nos limiares calculados e nas leituras dos sensores."
 			}
@@ -153,13 +153,13 @@ Requirement Requisitos ( 8 ) {
 			}
 		}
 		
-		Requirement MonitorDoLeitoFR ( 27 ) {
+		Requirement MonitorDoLeitoFR ( 27 ) { text = "Os sinais vitais do paciente devem ser exibidos no monitor"
 			Requirement ExibirDadosEmTempoRealNoMonitoFR ( 26 ) {
 				text = "O Monitor do Leito deve exibir os dados de todos os sensores em tempo real, com uma taxa de atualizacao de no mınimo 200ms, permitindo acompanhamento contınuo do estado do paciente."
 			}
 		}
 		
-		Requirement InterfaceGrafica ( 28 ) {
+		Requirement InterfaceGraficaFR ( 28 ) { text = "O sistema deve exibir os dados e alertas dos pacientes em tempo real"
 			Requirement ExibirAlertasEmTempoRealFR ( 31 ) {
 				text = "O dashboard deve exibir alertas em tempo real, destacando visualmente os alertas crıticos e de atencao, com informacoes sobre o leito, paciente e tipo de alerta."
 			}
