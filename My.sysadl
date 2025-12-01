@@ -1,5 +1,10 @@
 Model SysADLModel ; 
-package SysADL.Components { boundary
+package SysADL.Components { 
+	import SysADL.Ports;
+	import SysADL.types;
+	
+	boundary
+	
 	
 	component def SensorCP { 
 		configuration {
@@ -147,7 +152,95 @@ dataNascimento : dataHora;
                      habilitado : Boolean;
     }
     enum AlertaNivel { NORMAL, ATENCAO, CRITICO } 
-    enum tipoDeSensor { OXIGENACAO, BATIMENTO, PRESSAO, ECG } 
+    enum tipoDeSensor { OXIGENACAO, BATIMENTO, PRESSAO, ECG }
+     
+    datatype metricaInfra {
+        attributes :
+            nome : String ;
+            valor : Real ;
+            timestamp : dataHora ;
+    }
+}
+
+package SysADL.Ports {
+	
+	import SysADL.types;
+
+
+	port def SinalVitalOPT {
+		flow out mensagemSensor
+	}
+	port def SinalVitalIPT {
+		flow in mensagemSensor
+	}
+
+	port def MensagemRedeOPT {
+		flow out mensagemColetor
+	}
+	port def MensagemRedeIPT {
+		flow in mensagemColetor
+	}
+
+
+	port def IntegracaoOPT {
+		flow out paciente
+	}
+	port def IntegracaoIPT {
+		flow in paciente
+	}
+
+	port def PersistenciaOPT {
+        flow out mensagemColetor
+    }
+    port def PersistenciaIPT {
+        flow in mensagemColetor
+    }
+
+	port def QueryOPT {
+		flow out String
+	}
+	port def QueryIPT {
+		flow in String
+	}
+
+
+	port def AuthOPT {
+		flow out String
+	}
+	port def AuthIPT {
+		flow in String
+	}
+
+	port def AlertaOPT {
+		flow out alertaDeRisco
+	}
+	port def AlertaIPT {
+		flow in alertaDeRisco
+	}
+
+
+	port def ComandoAlertaOPT {
+		flow out Boolean
+	}
+	port def ComandoAlertaIPT {
+		flow in Boolean
+	}
+
+
+	port def RegraIPT {
+		flow in regraDeMonitoramento
+	}
+	port def RegraOPT {
+		flow out regraDeMonitoramento
+	}
+	
+
+	port def MetricaIPT {
+        flow in metricaInfra
+    }
+    port def MetricaOPT {
+        flow out metricaInfra
+    }
 }
  
 Requirement MonitorElectrocardiogramCP ( 4 ) { derive MonitorPatientDataFR ; } 
