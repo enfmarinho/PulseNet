@@ -202,6 +202,19 @@ package SysADL.Components {
 	
 	boundary
 	
+	component def ProcessadorLocalCP {
+		ports :
+			entradaDados : SinalVitalIPT ;
+			saidaRedeInterna : MensagemRedeOPT ;
+			disparoAlarme : ComandoAlertaOPT ;
+	}
+	
+	component def AnaliseRiscoCP {
+		ports :
+			entradaAnalise : TopicoVitalIPT ;
+			triggerAlerta : TopicoAlertaOPT ;
+			dadosPersistencia : PersistenciaOPT ;
+	}
 	
 	component def SensorCP {
 		ports :
@@ -227,24 +240,74 @@ package SysADL.Components {
 		configuration {
 			components :
 			
-				Buffer : BufferLocalCP {}
-				DriverSensor : DriverSensorCP {}
+				DriverSensor : DriverSensorCP {
+					using ports :
+						rawInput : SinalVitalIPT;
+						digitalOut : SinalVitalOPT;
+				}
+
+				Buffer : BufferLocalCP {
+					using ports :
+						dataIn : SinalVitalIPT;
+						dataOut : SinalVitalOPT;
+				}
+				
+				Processador : ProcessadorLocalCP {
+					using ports :
+						entradaDados : SinalVitalIPT ;
+						saidaRedeInterna : MensagemRedeOPT ;
+						disparoAlarme : ComandoAlertaOPT ;
+				}
+				connectors :
+				
+				
+				cInterno1 : FioFisicoCN bindings digitalOut = dataIn;
+				
+				
+				cInterno2 : FioFisicoCN bindings dataOut = entradaDados;
+				
+			delegations :
+				
+				
+				rawInput to entradaSinal
+				
+				
+				saidaRedeInterna to saidaRede
+				
+				
+				disparoAlarme to comandoAlarme
 			}
 			
 	} boundary
 	
-	component def LoggerAuditoriaCP {}
+	component def LoggerAuditoriaCP {
+		ports :
+			entradaLog : PersistenciaIPT ;
+			saidaLog : PersistenciaOPT ;
+	}
 	
-	component def MotorNotificacaoCP {}
+	component def MotorNotificacaoCP {
+		ports :
+			entradaTrigger : TopicoAlertaIPT ;
+			publicaNotificacao : TopicoAlertaOPT ;
+	}
 	
 	component def AdaptadorHISCP {
 		ports :
 			conexaoHIS : IntegracaoOPT ;
 	}
 	
-	component def BufferLocalCP {}
+	component def BufferLocalCP {
+		ports :
+			dataIn : SinalVitalIPT ;
+			dataOut : SinalVitalOPT ;
+	}
 	
-	component def DriverSensorCP {}
+	component def DriverSensorCP {
+		ports :
+			rawInput : SinalVitalIPT ;
+			digitalOut : SinalVitalOPT ;
+	}
 	
 	component def DispositivoAlertaCP {
 		ports :
@@ -275,15 +338,46 @@ package SysADL.Components {
     
     component def AlertProcessorCP { 
     	ports :
-    		entradaFila :TopicoVitalIPT ;
+    		entradaFila : TopicoVitalIPT ;
     		publicaAlerta : TopicoAlertaOPT ;
     		persistencia : PersistenciaOPT ;
     		saidaMetrica : MetricaOPT ;
+    		
     	configuration {
 			components :
 				
-				LoggerAuditoria : LoggerAuditoriaCP {}
-				MotorNotificacao : MotorNotificacaoCP {}
+				AnaliseRisco : AnaliseRiscoCP {
+					using ports :
+						entradaAnalise : TopicoVitalIPT ;
+						triggerAlerta : TopicoAlertaOPT ;
+						dadosPersistencia : PersistenciaOPT ;
+				}
+
+				MotorNotificacao : MotorNotificacaoCP {
+					using ports :
+						entradaTrigger : TopicoAlertaIPT ;
+						publicaNotificacao : TopicoAlertaOPT ;
+				}
+				
+				LoggerAuditoria : LoggerAuditoriaCP {
+					using ports :
+						entradaLog : PersistenciaIPT ;
+						saidaLog : PersistenciaOPT ;
+				}
+
+			connectors :
+			
+				cInterno1 : StreamingAlertaCN bindings triggerAlerta = entradaTrigger ;
+				
+				cInterno2 : PersistenciaCN bindings dadosPersistencia = entradaLog ;
+				
+			delegations :
+				
+				entradaAnalise to entradaFila
+				
+				publicaNotificacao to publicaAlerta
+				
+				saidaLog to persistencia
 			}
 	}
     
