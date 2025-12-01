@@ -1,4 +1,90 @@
 Model SysADLModel ; 
+package SysADL.Components { boundary
+	
+	component def SensorCP { 
+		configuration {
+			components :
+			
+				DriverSensor : DriverSensorCP {}
+			}
+	} boundary
+	
+	component def MonitorLeitoCP {
+		configuration {
+			components :
+			
+				Buffer : BufferLocalCP {}
+				DriverSensor : DriverSensorCP {}
+			}
+			
+	} boundary
+	
+	component def LoggerAuditoriaCP {}
+	
+	component def MotorNotificacaoCP {}
+	
+	component def AdaptadorHISCP {}
+	
+	component def BufferLocalCP {}
+	
+	component def DriverSensorCP {}
+	
+	component def DispositivoAlertaCP { } boundary
+	
+	component def MonitoringDashboardCP { 
+		configuration {
+			components :
+				
+				LoggerAuditoria : LoggerAuditoriaCP {}
+				AdaptadorHIS : AdaptadorHISCP {}
+			}
+	}
+    
+    component def ColetorCP { configuration { } }
+    
+    component def AlertProcessorCP { 
+    	configuration {
+			components :
+				
+				LoggerAuditoria : LoggerAuditoriaCP {}
+				MotorNotificacao : MotorNotificacaoCP {}
+			}
+	}
+    
+    component def AuthServiceCP { 
+    	configuration {
+			components :
+			
+				LoggerAuditoria : LoggerAuditoriaCP {}
+			} 
+	}
+    
+    component def LogicaMedicaCP { configuration { } }
+    
+    component def MessageBrokerCP { configuration { } }
+    
+    component def DatabaseCP { configuration { } }
+
+    
+    component def SysADLPulseNet {
+    	configuration {
+    		components :
+    			Coletor : ColetorCP {}
+    			MessageBroker : MessageBrokerCP {}
+    			AlertProcessor : AlertProcessorCP {}
+    			LogicaMedica : LogicaMedicaCP {}
+    			Database : DatabaseCP {}
+    			AuthService : AuthServiceCP {}
+    			MonitoringDashboard : MonitoringDashboardCP {}
+    			DispositivoAlerta : DispositivoAlertaCP {}
+    			MonitorLeito : MonitorLeitoCP {}
+    			Sensor : SensorCP {}
+    	}
+
+     	
+    } 
+ } 
+
 package SysADL.types { 
 	value type Int { } 
 	value type Boolean { } 
