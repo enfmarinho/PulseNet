@@ -60,6 +60,17 @@ package SysADL.types {
 					 janelaTemporal : dataHora;
 					 habilitado : Boolean;
 	}
+	datatype metricaInfra { 
+		attributes : nome : String;
+					 valor : Real;
+					 timestamp : dataHora;
+	}
+	datatype chamadaRegra { 
+		attributes : idPaciente : idPaciente;
+					 nivelSeguro : regraDeMonitoramento;
+					 dadosPaciente : mensagemColetor;
+					 nivelAlerta : alertaDeRisco;
+	}
 	enum AlertaNivel { NORMAL, ATENCAO, CRITICO } 
 	enum tipoDeSensor { OXIGENACAO, BATIMENTO, PRESSAO, ECG } 
 } 
