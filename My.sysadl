@@ -207,6 +207,8 @@ package SysADL.Components {
 			entradaDados : SinalVitalIPT ;
 			saidaRedeInterna : MensagemRedeOPT ;
 			disparoAlarme : ComandoAlertaOPT ;
+			entradaRegrasInterna : RegraIPT ;
+			saidaMetricaInterna : MetricaOPT ;
 	}
 	
 	component def AnaliseRiscoCP {
@@ -214,6 +216,7 @@ package SysADL.Components {
 			entradaAnalise : TopicoVitalIPT ;
 			triggerAlerta : TopicoAlertaOPT ;
 			dadosPersistencia : PersistenciaOPT ;
+			chamadaLogica : LogicaIPT ;
 	}
 	
 	component def SensorCP {
@@ -255,8 +258,10 @@ package SysADL.Components {
 				Processador : ProcessadorLocalCP {
 					using ports :
 						entradaDados : SinalVitalIPT ;
+						entradaRegrasInterna : RegraIPT ;
 						saidaRedeInterna : MensagemRedeOPT ;
 						disparoAlarme : ComandoAlertaOPT ;
+						saidaMetricaInterna : MetricaOPT ;
 				}
 				connectors :
 				
@@ -276,6 +281,8 @@ package SysADL.Components {
 				
 				
 				disparoAlarme to comandoAlarme
+				
+				saidaMetricaInterna to saidaMetrica
 			}
 			
 	} boundary
@@ -351,6 +358,7 @@ package SysADL.Components {
 						entradaAnalise : TopicoVitalIPT ;
 						triggerAlerta : TopicoAlertaOPT ;
 						dadosPersistencia : PersistenciaOPT ;
+						chamadaLogica : LogicaIPT ;
 				}
 
 				MotorNotificacao : MotorNotificacaoCP {
@@ -364,12 +372,19 @@ package SysADL.Components {
 						entradaLog : PersistenciaIPT ;
 						saidaLog : PersistenciaOPT ;
 				}
+				
+				LogicaMedica : LogicaMedicaCP {
+                    using ports :
+                        executaRegra : LogicaOPT ;
+                }
 
 			connectors :
 			
-				cInterno1 : StreamingAlertaCN bindings triggerAlerta = entradaTrigger ;
+				c_logica : ChamadaLogicaCN bindings executaRegra = chamadaLogica ;
 				
-				cInterno2 : PersistenciaCN bindings dadosPersistencia = entradaLog ;
+				c_alerta : StreamingAlertaCN bindings triggerAlerta = entradaTrigger ;
+				
+				c_persistencia : PersistenciaCN bindings dadosPersistencia = entradaLog ;
 				
 			delegations :
 				
@@ -394,6 +409,7 @@ package SysADL.Components {
     component def LogicaMedicaCP { 
     	ports :
     		distribuicaoRegras : RegraOPT ;
+    		executaRegra : LogicaOPT ;
     	configuration { }
     }
     
@@ -511,6 +527,7 @@ package SysADL.types {
     value type batimentosCardiacos {unit = bpm dimension = frequencia}
     value type pressaoDiastolica {unit = mmHG dimension = pressao}
     value type pressaoSistolica {unit = mmHG dimension = pressao} 
+    datatype ChamadaRegras { }
     datatype pressaoArterial { 
         attributes : pressaoSistolica : pressaoSistolica;
                      pressaoDiastolica : pressaoDiastolica;
@@ -563,7 +580,13 @@ package SysADL.Ports {
 	
 	import SysADL.types;
 
-
+	port def LogicaIPT {
+	flow in ChamadaRegras
+	}
+	port def LogicaOPT {
+		flow out ChamadaRegras
+	}
+	
 	port def SinalVitalOPT {
 		flow out mensagemSensor
 	}
@@ -687,6 +710,10 @@ package SysADL.Connectors {
 	connector def PersistenciaCN {
 		participants : ~src : PersistenciaOPT; ~dst : PersistenciaIPT;
 		flows : mensagemColetor from src to dst
+	}
+	connector def ChamadaLogicaCN {
+		participants : ~src : LogicaOPT; ~dst : LogicaIPT;
+		flows : ChamadaRegras from src to dst
 	}
 }
  
