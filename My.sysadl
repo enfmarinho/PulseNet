@@ -86,13 +86,69 @@ package SysADL.Components { boundary
  } 
 
 package SysADL.types { 
-	value type Int { } 
-	value type Boolean { } 
-	value type String { } 
-	value type Void { } 
-	value type Real { }
-} 
-
+    value type Int { } 
+    value type Boolean { } 
+    value type String { } 
+    value type Void { } 
+    value type Real { } 
+    dimension pressao 
+    dimension tempo 
+    dimension percentual 
+    dimension frequencia 
+    dimension identificador 
+    unit porcentagem 
+    unit bpm 
+    unit mmHG 
+    unit idUnit 
+    unit dataHoraUnit 
+    value type dataHora {unit = dataHoraUnit dimension = tempo} 
+    value type oxigenacaoSanguinea {unit = porcentagem dimension = percentual} 
+    value type idSensor {unit = idUnit dimension = identificador}
+    value type idPaciente {unit = idUnit dimension = identificador} 
+    value type idLeito {unit = idUnit dimension = identificador}
+    value type batimentosCardiacos {unit = bpm dimension = frequencia}
+    value type pressaoDiastolica {unit = mmHG dimension = pressao}
+    value type pressaoSistolica {unit = mmHG dimension = pressao} 
+    datatype pressaoArterial { 
+        attributes : pressaoSistolica : pressaoSistolica;
+                     pressaoDiastolica : pressaoDiastolica;
+    }
+    datatype mensagemSensor { 
+        attributes : oxigenacao : oxigenacaoSanguinea;
+                     batimentos : batimentosCardiacos;
+                     pressao : pressaoArterial;
+                     dataHora : dataHora; 
+                      
+    } 
+    datatype mensagemColetor { 
+        attributes : leito : idLeito;
+                     leitura : mensagemSensor; 
+    } 
+    datatype alertaDeRisco { 
+        attributes : alertaNivel : AlertaNivel;
+                     idPaciente : idPaciente;
+                     idLeito : idLeito;
+                     idSensor : idSensor; 
+                      
+    }  
+    datatype paciente { 
+        attributes : id : idPaciente;
+                     nome : String;
+dataNascimento : dataHora;
+    }
+    datatype leito { 
+        attributes : id : idLeito;
+                     numero : Int;
+                     setor : String;
+    }
+    datatype regraDeMonitoramento { 
+        attributes : tipoSinal : tipoDeSensor;
+                     janelaTemporal : dataHora;
+                     habilitado : Boolean;
+    }
+    enum AlertaNivel { NORMAL, ATENCAO, CRITICO } 
+    enum tipoDeSensor { OXIGENACAO, BATIMENTO, PRESSAO, ECG } 
+}
  
 Requirement MonitorElectrocardiogramCP ( 4 ) { derive MonitorPatientDataFR ; } 
 Requirement MonitoBloodPresureCP ( 5 ) { derive MonitorPatientDataFR ; } 

@@ -4,7 +4,7 @@
     <semanticResources>My.sysadl</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_9jG90INREfClopnZVRc_hQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9jexQINREfClopnZVRc_hQ" name="Package Diagram" repPath="#_9jR88INREfClopnZVRc_hQ" changeId="1764562115210">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9jexQINREfClopnZVRc_hQ" name="Package Diagram" repPath="#_9jR88INREfClopnZVRc_hQ" changeId="1764568066340">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']"/>
         <target xmi:type="sysadl:Model" href="My.sysadl#/"/>
       </ownedRepresentationDescriptors>
@@ -53,7 +53,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taXyMs5cEfCOmbER9dFRfg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_taWkEc5cEfCOmbER9dFRfg" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taWkEs5cEfCOmbER9dFRfg" width="100" height="60"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taWkEs5cEfCOmbER9dFRfg" x="40" y="79" width="100" height="60"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_aB91QM5rEfCOmbER9dFRfg" type="3007" element="_aB0rUs5rEfCOmbER9dFRfg">
               <children xmi:type="notation:Node" xmi:id="_aB-cUM5rEfCOmbER9dFRfg" type="5003">
@@ -64,7 +64,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB-cVM5rEfCOmbER9dFRfg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_aB91Qc5rEfCOmbER9dFRfg" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB91Qs5rEfCOmbER9dFRfg" width="100" height="60"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB91Qs5rEfCOmbER9dFRfg" x="220" y="138" width="100" height="60"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_9lh_sYNREfClopnZVRc_hQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_9lh_soNREfClopnZVRc_hQ"/>
